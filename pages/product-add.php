@@ -22,12 +22,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         array_push($message, 'Description is required');
     }
 
-    $upload = upload_file('files/products', $_FILES['image_file'], array('gif', 'jpg', 'png'));
-    if (!empty($upload)) {
-        if ($upload['error'] == 0) {
-            $prod_image = $upload['location'];
-        } else {
-            array_push($message, $upload['message']);
+    if (empty($message)) {
+        $upload = upload_file('files/products', $_FILES['image_file'], array('gif', 'jpg', 'png'));
+        if (!empty($upload)) {
+            if ($upload['error'] == 0) {
+                $prod_image = $upload['location'];
+            } else {
+                array_push($message, $upload['message']);
+            }
         }
     }
 

@@ -38,12 +38,14 @@ function create() {
         array_push($message, 'Description is required');
     }
 
-    $upload = upload_file('../files/shipping', $_FILES['image_file'], array('gif', 'jpg', 'png'));
-    if (!empty($upload)) {
-        if ($upload['error'] == 0) {
-            $ship_image = $upload['location'];
-        } else {
-            array_push($message, $upload['message']);
+    if (empty($message)) {
+        $upload = upload_file('../files/shipping', $_FILES['image_file'], array('gif', 'jpg', 'png'));
+        if (!empty($upload)) {
+            if ($upload['error'] == 0) {
+                $ship_image = $upload['location'];
+            } else {
+                array_push($message, $upload['message']);
+            }
         }
     }
 
@@ -89,12 +91,14 @@ function update() {
         array_push($message, 'Description is required');
     }
 
-    $upload = upload_file('../files/shipping', $_FILES['image_file'], array('gif', 'jpg', 'png'));
-    if (!empty($upload)) {
-        if ($upload['error'] == 0) {
-            $ship_image = $upload['location'];
-        } else {
-            array_push($message, $upload['message']);
+    if (empty($message)) {
+        $upload = upload_file('../files/shipping', $_FILES['image_file'], array('gif', 'jpg', 'png'));
+        if (!empty($upload)) {
+            if ($upload['error'] == 0) {
+                $ship_image = $upload['location'];
+            } else {
+                array_push($message, $upload['message']);
+            }
         }
     }
 
