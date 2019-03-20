@@ -9,7 +9,7 @@ require_once('functions.php');
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Simple CRUD Application Script</title>
+        <title>Simple CRUD Application</title>
 
         <!-- StyleSheet -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">

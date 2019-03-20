@@ -60,8 +60,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="text" class="form-control" id="cat_description" name="cat_description" value="<?php echo $cat_description; ?>" required>
             </div>
             <div class="form-group text-right">
+                <button type="button" class="btn btn-danger" onclick="window.location.href = '?show=categories';"><i class="fas fa-times"></i> Close</button>
                 <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Create Category</button>
-                <button type="button" class="btn btn-success" onclick="window.location.href = '?show=categories';"><i class="fas fa-arrow-left"></i> Back</button>
             </div>
         </form>
     </div>

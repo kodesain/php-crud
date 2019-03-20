@@ -110,8 +110,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="file" class="form-control" id="image_file" name="image_file">
             </div>
             <div class="form-group text-right">
+                <button type="button" class="btn btn-danger" onclick="window.location.href = '?show=products';"><i class="fas fa-times"></i> Close</button>
                 <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Update Product</button>
-                <button type="button" class="btn btn-success" onclick="window.location.href = '?show=products';"><i class="fas fa-arrow-left"></i> Back</button>
             </div>
         </form>
     </div>
